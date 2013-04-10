@@ -73,7 +73,7 @@
 			<key>comment</key>
 			<string>Opcodes that require delay slots</string>
 			<key>match</key>
-			<string>\b(?i)(ba|bn|bne|be|bg|ble|bge|bl|bgu|bleu|bcc|bcs|bpos|bneg|bvc|bvs|ret|retl|call|jmp|jmpl|return)(?-i)\b</string>
+			<string>\b(?i)(ba|bn|bne|be|bg|ble|bge|bl|bgu|bleu|bcc|bcs|bpos|bneg|bvc|bvs|ret|retl|call|jmp|jmpl|return|b)(?-i)\b</string>
 			<key>name</key>
 			<string>constant.other.sparc</string>
 		</dict>
