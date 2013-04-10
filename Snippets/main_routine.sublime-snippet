@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+	.section ".text"
+	.align ${1:4}
+	.global ${2:main}
+${2:main}:
+	save %sp, (-92 + -${3:0}) & -8, %sp
+
+	${0}
+
+	ret
+	restore
+
+.section ".data"
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>main</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

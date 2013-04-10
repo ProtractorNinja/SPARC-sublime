@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+	.global ${1:main}
+${1:main}:
+	save %sp, (-92 + -${2:0}) & -8, %sp
+	
+	${0}
+	
+	ret
+	restore
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>subr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sparc</scope>
+</snippet>

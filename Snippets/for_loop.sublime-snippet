@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+clr %${1:iterator}
+${3:${2}_for_loop_start}:
+	cmp %${1}, ${4:comparator}
+	bge ${5:${2}_for_loop_end}
+	nop
+
+	${0}
+
+	ba ${3}
+	inc %${1}
+
+${5}:
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>for</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sparc</scope>
+</snippet>

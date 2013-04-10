@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+sll %${1:iterator}, ${2:log_2 (element size)}, %${3:offset}
+ld [%${4:array start address} + %${3}], %${5:a[i]}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>arr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sparc</scope>
+</snippet>
