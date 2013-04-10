@@ -10,10 +10,10 @@ Provides SPARC assembly language syntax highlighting, as well as various snippet
 ## Snippets
 Below is a concise list of all available code snippets. For an explanation of each, read further down.
 
-	- `main`
-	- `subr`
-	- `for`
-	- `arr`
+- `main`
+- `subr`
+- `for`
+- `arr`
 
 ### Subroutines
 ### Structures
