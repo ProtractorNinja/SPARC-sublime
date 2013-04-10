@@ -4,11 +4,11 @@ Provides SPARC assembly language syntax highlighting, as well as various snippet
 Please note that this file, `README.MD`, is a work in progress and is *definitely* lacking in some places.
 
 ### Completion status
-- [ ] Syntax highlighting (Nearly complete, if not finished)
-- [ ] Snippets (in progress)
-- [ ] Readme (in progress)
-- [ ] In package control (no)
-- [ ] Installable (probably, but not for certain)
+    - Syntax highlighting -- Nearly complete, if not finished
+    - Snippets -- in progress
+    - Readme -- in progress
+    - In package control -- no
+    - Installable -- probably, but not for certain
 
 ## Installation
 One day, this section will contain useful information.
