@@ -42,26 +42,6 @@
 			<string>string.quoted.double.sparc</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>comment</key>
-			<string>Single quote strings</string>
-			<key>end</key>
-			<string>'</string>
-			<key>name</key>
-			<string>string.quoted.single.sparc</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>`</string>
-			<key>comment</key>
-			<string>M4 macro definitions. Should these even be here?</string>
-			<key>end</key>
-			<string>'</string>
-			<key>name</key>
-			<string>string.interpolated.sparc</string>
-		</dict>
-		<dict>
 			<key>comment</key>
 			<string>Regular opcodes</string>
 			<key>match</key>
@@ -97,7 +77,7 @@
 			<key>comment</key>
 			<string>Basic number operators</string>
 			<key>match</key>
-			<string>(&amp;|-|\+|\||\[|\]|,)</string>
+			<string>(&amp;|-|\+|\||\[|\]|,|`|')</string>
 			<key>name</key>
 			<string>keyword.operator.sparc</string>
 		</dict>
@@ -145,7 +125,7 @@
 			<key>comment</key>
 			<string>Macro definitions</string>
 			<key>match</key>
-			<string>define</string>
+			<string>define(?=.*\()</string>
 			<key>name</key>
 			<string>support.function.sparc</string>
 		</dict>
