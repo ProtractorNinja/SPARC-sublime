@@ -3,17 +3,61 @@
   "fileTypes": ["m", "s"],
   "comment": "Referenced from the SPARC Architecture Manual, Version 8: http://sparc.org/standards/V8.pdf",
   "patterns": [
-    {  "name": "comment.line.sparc",
-       "begin": "!",
-       "beginCaptures": {
-          "0": { "name": "punctuation.definition.comment.sparc" }
-       },
-       "end": "$\\n?",
-       "comment": "SPARC comments"
+    { "captures": {
+        "1": { "name": "meta.toc-list.banner.block.sparc" }
+      }, 
+      "match": "^/\\* =(\\s*.*?)\\s*= \\*/$\\n?", 
+      "name": "comment.block.sparc",
+      "comment": "Shamelessly stolen from c.tmLanguage"
+    }, 
+    { "begin": "/\\*", 
+      "captures": {
+        "0": { "name": "punctuation.definition.comment.sparc" }
+      }, 
+      "end": "\\*/", 
+      "name": "comment.block.sparc",
+      "comment": "Shamelessly stolen from c.tmLanguage"
+    }, 
+    { "match": "\\*/.*\\n", 
+      "name": "invalid.illegal.stray-comment-end.sparc",
+      "comment": "Shamelessly stolen from c.tmLanguage"
+    }, 
+    { "captures": {
+        "1": { "name": "meta.toc-list.banner.line.sparc" }
+      }, 
+      "match": "^// =(\\s*.*?)\\s*=\\s*$\\n?", 
+      "name": "comment.line.banner.sparc",
+      "comment": "Shamelessly stolen from c.tmLanguage"
+    }, 
+    { "name": "comment.line.sparc",
+      "begin": "!",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.comment.sparc" }
+      },
+      "end": "$\\n?",
+      "comment": "SPARC comments"
     },
     { "name": "string.quoted.double.sparc",
       "begin": "\"",
       "end": "\"",
+      "patterns": [
+        { "match": "\\\\(\\\\|[abefnprtv'\"?]|[0-3]\\d{,2}|[4-7]\\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8})", 
+          "name": "constant.character.escape.sparc",
+          "comment": "Shamelessly stolen from c.tmLanguage"
+        }, 
+        { "match": "\\\\.", 
+          "name": "invalid.illegal.unknown-escape.sparc",
+          "comment": "Shamelessly stolen from c.tmLanguage"
+        },
+        { "match": "(?x)%\n    \t\t\t\t\t\t(\\d+\\$)?   # field (argument #)\n    \t\t\t\t\t\t[#0\\- +']*                           # flags\n    \t\t\t\t\t\t[,;:_]?                              # separator character (AltiVec)\n    \t\t\t\t\t\t((-?\\d+)|\\*(-?\\d+\\$)?)?              # minimum field width\n    \t\t\t\t\t\t(\\.((-?\\d+)|\\*(-?\\d+\\$)?)?)?         # precision\n    \t\t\t\t\t\t(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier\n    \t\t\t\t\t\t[diouxXDOUeEfFgGaACcSspn%]           # conversion type\n    \t\t\t\t\t", 
+          "name": "constant.other.placeholder.sparc",
+          "comment": "Shamelessly stolen from c.tmLanguage"
+        }, 
+        { "match": "%", 
+          "name": "invalid.illegal.placeholder.sparc",
+          "comment": "Shamelessly stolen from c.tmLanguage"
+        }
+      ],
       "comment": "Double quote strings"
     },
     {  "name": "keyword.control.sparc",
@@ -53,12 +97,12 @@
        "comment": "Labels"
     },
     {  "name": "storage.modifier.sparc",
-       "match": "\\.(ascii|asciz|text|data|bss|skip|align|byte|half|word|single|double|quad|global|common|empty|file|section|type|proc|size|ident|section)\\b",
+       "match": "[^\\w]\\.(ascii|asciz|text|data|bss|skip|align|byte|half|word|single|double|quad|global|common|empty|file|section|type|proc|size|ident|section)\\b",
        "comment": "Pseudo-operators"
     },
     {  "name": "support.function.sparc",
-       "match": "define(?=.*\\()",
-       "comment": "Macro definitions"
+       "match": "(\\bdivert\\b|((define|include|eval)(?=.*\\()))",
+       "comment": "M4 macro syntax -- will be updated later"
     }
   ],
   "uuid": "d407d941-d4c9-4203-8445-9a64b75a996a"

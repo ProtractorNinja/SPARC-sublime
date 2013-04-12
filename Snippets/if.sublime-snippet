@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+cmp %${1:comparator register 1}, ${2:comparator 2}
+${3:successful branch} if_${4:if name}_then
+${5:nop}
+if_not_${4}:
+	${0}
+	ba if_${4}_complete
+	nop
+if_${4}_then:
+	
+if_${4}_complete:
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>if</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sparc</scope>
+</snippet>

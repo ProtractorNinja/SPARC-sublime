@@ -14,6 +14,64 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.toc-list.banner.block.sparc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Shamelessly stolen from c.tmLanguage</string>
+			<key>match</key>
+			<string>^/\* =(\s*.*?)\s*= \*/$\n?</string>
+			<key>name</key>
+			<string>comment.block.sparc</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.sparc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Shamelessly stolen from c.tmLanguage</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.sparc</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Shamelessly stolen from c.tmLanguage</string>
+			<key>match</key>
+			<string>\*/.*\n</string>
+			<key>name</key>
+			<string>invalid.illegal.stray-comment-end.sparc</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.toc-list.banner.line.sparc</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Shamelessly stolen from c.tmLanguage</string>
+			<key>match</key>
+			<string>^// =(\s*.*?)\s*=\s*$\n?</string>
+			<key>name</key>
+			<string>comment.line.banner.sparc</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>!</string>
 			<key>beginCaptures</key>
@@ -40,6 +98,49 @@
 			<string>"</string>
 			<key>name</key>
 			<string>string.quoted.double.sparc</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>comment</key>
+					<string>Shamelessly stolen from c.tmLanguage</string>
+					<key>match</key>
+					<string>\\(\\|[abefnprtv'"?]|[0-3]\d{,2}|[4-7]\d?|x[a-fA-F0-9]{,2}|u[a-fA-F0-9]{,4}|U[a-fA-F0-9]{,8})</string>
+					<key>name</key>
+					<string>constant.character.escape.sparc</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Shamelessly stolen from c.tmLanguage</string>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>invalid.illegal.unknown-escape.sparc</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Shamelessly stolen from c.tmLanguage</string>
+					<key>match</key>
+					<string>(?x)%
+    						(\d+\$)?   # field (argument #)
+    						[#0\- +']*                           # flags
+    						[,;:_]?                              # separator character (AltiVec)
+    						((-?\d+)|\*(-?\d+\$)?)?              # minimum field width
+    						(\.((-?\d+)|\*(-?\d+\$)?)?)?         # precision
+    						(hh|h|ll|l|j|t|z|q|L|vh|vl|v|hv|hl)? # length modifier
+    						[diouxXDOUeEfFgGaACcSspn%]           # conversion type
+    					</string>
+					<key>name</key>
+					<string>constant.other.placeholder.sparc</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Shamelessly stolen from c.tmLanguage</string>
+					<key>match</key>
+					<string>%</string>
+					<key>name</key>
+					<string>invalid.illegal.placeholder.sparc</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -117,15 +218,15 @@
 			<key>comment</key>
 			<string>Pseudo-operators</string>
 			<key>match</key>
-			<string>\.(ascii|asciz|text|data|bss|skip|align|byte|half|word|single|double|quad|global|common|empty|file|section|type|proc|size|ident|section)\b</string>
+			<string>[^\w]\.(ascii|asciz|text|data|bss|skip|align|byte|half|word|single|double|quad|global|common|empty|file|section|type|proc|size|ident|section)\b</string>
 			<key>name</key>
 			<string>storage.modifier.sparc</string>
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>Macro definitions</string>
+			<string>M4 macro syntax -- will be updated later</string>
 			<key>match</key>
-			<string>define(?=.*\()</string>
+			<string>(\bdivert\b|((define|include|eval)(?=.*\()))</string>
 			<key>name</key>
 			<string>support.function.sparc</string>
 		</dict>
