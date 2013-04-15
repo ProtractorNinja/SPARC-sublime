@@ -1,9 +1,9 @@
 # SPARC Syntax for Sublime Text 2
 
-Provides `SPARC` assembly language syntax highlighting, as well as various
+Provides SPARC assembly language syntax highlighting, as well as various
 snippets.
 
-Though `SPARC` is fairly uncommon, it is still used as a teaching language
+Though SPARC is fairly uncommon, it is still used as a teaching language
 in some universities (including my own up until Fall 2013). Writing
 SPARC without syntax highlighting is a horror that no mortal should have
 to endure.
@@ -33,10 +33,10 @@ Make sure to restart Sublime Text 2 when you're finished.
 
 ### Setting SPARC as the default language
 
-Other languages include the `SPARC` file extensions, `.s` and `.m`, in
-their syntax definitions (`R` and `Objective-C`, respectively), and
-Sublime Text tends to favor them over `SPARC` by default. To make them
-open with `SPARC` highlighting by default, open an `.s` or `.m` file, and
+Other languages include the SPARC file extensions, `.s` and `.m`, in
+their syntax definitions (R and Objective-C, respectively), and
+Sublime Text tends to favor them over SPARC by default. To make them
+open with SPARC highlighting by default, open an `.s` or `.m` file, and
 click `View -> Syntax -> Open all with current extension as... ->
 SPARC`.
 
