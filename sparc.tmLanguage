@@ -146,7 +146,7 @@
 			<key>comment</key>
 			<string>Regular opcodes</string>
 			<key>match</key>
-			<string>[^\.]\b(?i)(cmp|tst|restore|save|set|not|neg|inc|dec|deccc|bst|bset|bclr|btog|clr|clrb|clrh|mov|ldsb|ldsh|ldub|lduh|ld|ldd|ldsba|ldsha|lduba|lduha|lda|ldda|ldf|lddf|ldfsr|ldc|lddc|ldcsr|stb|sth|st|std|stba|stha|sta|stda|stf|stdf|stfsr|stdfq|ldstub|ldstuba|swap|swapa|sethi|and|andcc|andn|andncc|or|orcc|orn|orncc|xor|xorcc|xnor|xnorcc|sll|srl|sra|add|addcc|addx|addxcc|taddcc|taddcctv|sub|subcc|subx|subxcc|tsubcc|tsubcctv|mulscc|umul|umulcc|smul|smulcc|udiv|udivcc|sdiv|sdivcc|bicc|fbfcc|cbccc|rett|ticc|rdasr|rdy|rdpsr|rdwim|rdtbr|wrasr|wry|wrpsr|wrwim|wrtbr|stbar|unimp|flush|fpop|cpop)(?-i)\b</string>
+			<string>\b(?i)(cmp|tst|restore|save|set|not|neg|inc|dec|deccc|bst|bset|bclr|btog|clr|clrb|clrh|mov|ldsb|ldsh|ldub|lduh|ld|ldd|ldsba|ldsha|lduba|lduha|lda|ldda|ldf|lddf|ldfsr|ldc|lddc|ldcsr|stb|sth|st|std|stba|stha|sta|stda|stf|stdf|stfsr|stdfq|ldstub|ldstuba|swap|swapa|sethi|and|andcc|andn|andncc|or|orcc|orn|orncc|xor|xorcc|xnor|xnorcc|sll|srl|sra|add|addcc|addx|addxcc|taddcc|taddcctv|sub|subcc|subx|subxcc|tsubcc|tsubcctv|mulscc|umul|umulcc|smul|smulcc|udiv|udivcc|sdiv|sdivcc|bicc|fbfcc|cbccc|rett|ticc|rdasr|rdy|rdpsr|rdwim|rdtbr|wrasr|wry|wrpsr|wrwim|wrtbr|stbar|unimp|flush|fpop|cpop)(?-i)\b</string>
 			<key>name</key>
 			<string>keyword.control.sparc</string>
 		</dict>
