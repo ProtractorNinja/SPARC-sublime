@@ -30,7 +30,7 @@
       "comment": "Shamelessly stolen from c.tmLanguage"
     }, 
     { "name": "comment.line.sparc",
-      "begin": "!",
+      "begin": "!|;",
       "beginCaptures": {
         "0": { "name": "punctuation.definition.comment.sparc" }
       },
