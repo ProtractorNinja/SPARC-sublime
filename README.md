@@ -34,10 +34,11 @@ Make sure to restart Sublime Text 2 when you're finished.
 ### Setting SPARC as the default language
 
 Other languages include the SPARC file extensions, `.s` and `.m`, in
-their syntax definitions (R and Objective-C, respectively), and
-Sublime Text tends to favor them over SPARC by default. To make them
-open with SPARC highlighting by default, open an `.s` or `.m` file, and
-click `View -> Syntax -> Open all with current extension as... ->
+their syntax definitions (R and Objective-C, respectively). To combat
+this, I've included a `sparc.sublime-settings` file which *should*
+change the auto-syntax preference to SPARC. If I have failed, then you
+may make the change manually by opening an `.s` or `.m` file and
+clicking  `View -> Syntax -> Open all with current extension as... ->
 SPARC`.
 
 ## Syntax Notes 
