@@ -8,7 +8,7 @@
   		},
       {
         "name": "TM_COMMENT_DISABLE_INDENT",
-        "value": "yes"
+        "value": "no"
       }
   	]
   },
