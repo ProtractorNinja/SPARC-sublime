@@ -2,8 +2,10 @@
 	<content><![CDATA[
 umul %${1:row iterator}, ${2:total rows}, %${3:offset}
 add %${4:col iterator}, %${3}, %${3}
-sll %${3}, %${5:log_2 (element size)}, %${3}
-ld [%${6:array start address} + %${3}], %${6:a[i]}
+sll %${3}, ${5:log_2 (element size)}, %${3}
+
+ld [%${6:array start address} + %${3}], %${7:a[i]} ! or
+st ${7}, [%${6} + %${3}]
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>arr2d</tabTrigger>

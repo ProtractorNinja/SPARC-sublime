@@ -60,18 +60,41 @@ macro registers (such as `%my_register` from `define(my_register, l0)`.
 
 ## Snippets
 
-Below is a concise list of all available code snippets. For an
-explanation of each, read further down.
+The SPARC package provides 7 snippets for easier insertion of certain
+code structures. They are listed here along with an example, in which a `|` denotes the final carat position.
 
-- `main`
-- `subr`
-- `for`
-- `arr`
-- `if`
+`main` creates a basic empty program template, with sections for code and
+extra data.
 
-### Subroutines
-### Structures
-### Conditionals
-### Loops
+		.section ".text"
+		.align 4
+		.global main
+	main:
+		save %sp, (-92 + -0) & -8, %sp
+
+		|		
+
+		ret
+		restore
+
+	.section ".data"
+
+`subr` inserts a basic non-leaf (i.e. with its own register window)
+subroutine.
+
+`while` you wait, `while` expands into a simple while loop structure!
+
+`for` your convenience, `for` is like while, but with an iterator
+register already included.
+
+`arr` provides access (either for a `ld` or a `st`) to an
+element in a single dimensional array, as long as the address of the
+beginning of the array is already known.
+
+`arr2d` might seem complicated, but it's just the same as `arr` except
+that it works with a two-dimensional array instead.
+
+`if` you want a conditional, `if` has got your back. Feel free to remove the "else" section (`if_not_condition: ...`) if you don't need an else.
+
 
 ## Screenshots

@@ -1,20 +1,20 @@
 <snippet>
 	<content><![CDATA[
-	.section ".text"
-	.align ${1:4}
-	.global ${2:main}
-${2:main}:
-	save %sp, (-92 + -${3:0}) & -8, %sp
+${2:${1}_while_loop_start}:
+	cmp ${3:comparator 1}, ${4:comparator 2}
+	bge ${5:${1}_while_loop_end}
+	nop
 
 	${0}
 
-	ret
-	restore
+	ba ${2}
+	nop
 
-.section ".data"
+${5}:
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>main</tabTrigger>
+	<tabTrigger>while</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.sparc</scope>
 </snippet>

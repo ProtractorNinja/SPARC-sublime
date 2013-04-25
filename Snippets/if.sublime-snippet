@@ -1,13 +1,13 @@
 <snippet>
 	<content><![CDATA[
 cmp %${1:comparator register 1}, ${2:comparator 2}
-${3:successful branch} if_${4:if name}_then
+${3:unsuccessful branch} if_not_${4:if name}
 ${5:nop}
-if_not_${4}:
+if_${4}_then:
 	${0}
 	ba if_${4}_complete
 	nop
-if_${4}_then:
+if_not_${4}:
 	
 if_${4}_complete:
 
