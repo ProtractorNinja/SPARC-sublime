@@ -101,7 +101,7 @@
        "comment": "Pseudo-operators"
     },
     {  "name": "support.function.sparc",
-       "match": "\\b.*(?=\\()",
+       "match": "\\b[\\S]*(?=\\()",
        "comment": "M4 macro functions"
     }
   ],

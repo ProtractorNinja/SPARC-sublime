@@ -226,7 +226,7 @@
 			<key>comment</key>
 			<string>M4 macro functions</string>
 			<key>match</key>
-			<string>\b.*(?=\()</string>
+			<string>\b[\S]*(?=\()</string>
 			<key>name</key>
 			<string>support.function.sparc</string>
 		</dict>

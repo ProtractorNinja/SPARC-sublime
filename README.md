@@ -85,3 +85,11 @@ that it works with a two-dimensional array instead.
 
 
 ## Screenshots
+Using [Timmfin's Monokai variation](https://github.com/timmfin/monokai-timmfin):
+![Monokai Timmfin](screenshots/sparc-monokai-timmfin.png)
+
+Using [Carl Calderon's Calydon Light](https://github.com/carlcalderon/sublime-color-schemes)
+![Calydon Light](screenshots/sparc-calydon-light.png)
+
+Using [Dayle Rees' Github scheme](https://github.com/daylerees/colour-schemes):
+![Dayle Rees' Github](screenshots/sparc-dayle-rees-github.png)
