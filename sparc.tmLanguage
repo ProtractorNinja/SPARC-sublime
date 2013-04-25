@@ -224,9 +224,9 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>M4 macro syntax -- will be updated later</string>
+			<string>M4 macro functions</string>
 			<key>match</key>
-			<string>(\bdivert\b|((define|include|eval)(?=.*\()))</string>
+			<string>\b.*(?=\()</string>
 			<key>name</key>
 			<string>support.function.sparc</string>
 		</dict>

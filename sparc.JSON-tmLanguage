@@ -101,8 +101,8 @@
        "comment": "Pseudo-operators"
     },
     {  "name": "support.function.sparc",
-       "match": "(\\bdivert\\b|((define|include|eval)(?=.*\\()))",
-       "comment": "M4 macro syntax -- will be updated later"
+       "match": "\\b.*(?=\\()",
+       "comment": "M4 macro functions"
     }
   ],
   "uuid": "d407d941-d4c9-4203-8445-9a64b75a996a"
