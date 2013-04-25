@@ -61,23 +61,10 @@ macro registers (such as `%my_register` from `define(my_register, l0)`.
 ## Snippets
 
 The SPARC package provides 7 snippets for easier insertion of certain
-code structures. They are listed here along with an example, in which a `|` denotes the final carat position.
+code structures. They are listed below.
 
 `main` creates a basic empty program template, with sections for code and
 extra data.
-
-		.section ".text"
-		.align 4
-		.global main
-	main:
-		save %sp, (-92 + -0) & -8, %sp
-
-		|		
-
-		ret
-		restore
-
-	.section ".data"
 
 `subr` inserts a basic non-leaf (i.e. with its own register window)
 subroutine.
