@@ -1,6 +1,6 @@
 # SPARC Syntax for Sublime Text 2
 
-Provides SPARC assembly language syntax highlighting, as well as various
+Provides SPARC assembly language syntax highlighting, as well as a few
 snippets.
 
 Though SPARC is fairly uncommon, it is still used as a teaching language
@@ -8,12 +8,8 @@ in some universities (including my own up until Fall 2013). Writing
 SPARC without syntax highlighting is a horror that no mortal should have
 to endure.
 
-Please note that this file, `README.MD`, is a work in progress and is
-*definitely* lacking in some places.
-
 ## Installation
 ### Downloading the files
-##### SPARC will be added to Package Control once SPARC is complete.
 
 Navigate to your Sublime Text 2 `Packages` directory in your terminal...
 
@@ -85,11 +81,15 @@ that it works with a two-dimensional array instead.
 
 
 ## Screenshots
-Using [Timmfin's Monokai variation](https://github.com/timmfin/monokai-timmfin):
+
+Using 
+[Timmfin's Monokai variation](https://github.com/timmfin/monokai-timmfin):
 ![Monokai Timmfin](screenshots/sparc-monokai-timmfin.png)
 
-Using [Carl Calderon's Calydon Light](https://github.com/carlcalderon/sublime-color-schemes)
+Using
+[Carl Calderon's Calydon Light](https://github.com/carlcalderon/sublime-color-schemes)
 ![Calydon Light](screenshots/sparc-calydon-light.png)
 
-Using [Dayle Rees' Github scheme](https://github.com/daylerees/colour-schemes):
+Using
+[Dayle Rees' Github scheme](https://github.com/daylerees/colour-schemes):
 ![Dayle Rees' Github](screenshots/sparc-dayle-rees-github.png)
