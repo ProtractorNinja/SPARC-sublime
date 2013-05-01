@@ -1,15 +1,23 @@
 # SPARC Syntax for Sublime Text 2
 
-Provides SPARC assembly language syntax highlighting, as well as a few
-snippets.
+This package provides SPARC assembly language syntax highlighting, as
+well as a few code snippets.
 
-Though SPARC is fairly uncommon, it is still used as a teaching language
-in some universities (including my own up until Fall 2013). Writing
-SPARC without syntax highlighting is a horror that no mortal should have
-to endure.
+Although SPARC is fairly uncommon in practice, it is still used as a
+teaching language in some universities. Writing SPARC without syntax
+highlighting is a horror that no mortal need endure.
+
+Hilariously, my SPARC class was the final SPARC course my university
+offered before switching to x86. I hope that other students find this
+more useful than my classmates will.
 
 ## Installation
-### Downloading the files
+
+### Getting the files
+
+The easiest way to install SPARC-sublime is via the package control
+plugin... or will be, once my pull request is accepted. In the meantime,
+follow the instructions below.
 
 Navigate to your Sublime Text 2 `Packages` directory in your terminal...
 
@@ -17,13 +25,14 @@ Navigate to your Sublime Text 2 `Packages` directory in your terminal...
 - Windows: `%APPDATA%/Sublime Text 2/Packages/`
 - Linux: `~/.config/sublime-text-2/Packages/`
 
-...and type the command:
+...and paste (try middle click if you don't know the shortcut) the
+command:
 
 	git clone git@github.com:ProtractorNinja/SPARC-sublime.git SPARC
 
-To install manually, download these files to a folder called `SPARC` in
-your Sublime Text 2 `Packages` directory (open sublime text 2 -> click
-`preferences` -> click `browse packages`).
+To install manually, download this archive into a folder called `SPARC`
+in your Sublime Text 2 `Packages` directory (`Preferences -> Browse
+Packages...`).
 
 Make sure to restart Sublime Text 2 when you're finished.
 
@@ -39,31 +48,31 @@ SPARC`.
 
 ## Syntax Notes 
 
-The syntax highlighting should be mostly straight forward, but I'd like
+The syntax highlighting should be mostly straightforward, but I'd like
 to point out an important distinction between certain opcodes: **those
-opcodes that involve a delay slot are classified differently (and
-therefore usually colored differently) than those that do not.**
-Branching commands, jumping, and subroutine calls (the complete list is
-in the included `sparc.tmLanguage` file) are all colored differently
-than the others. `nop` also has its own syntax definition, and in most
-color schemes should have its own color.
+opcodes that involve a delay slot -- branching commands, jumping, and
+subroutine calls -- are colored differently than those that do not.**
+The complete list is located in `sparc.JSON-tmLanguage`, under
+`constant.other.sparc`. `nop` should also have its own color, because
+`nop` is special.
 
 Regular machine registers (`%r0-31`, `%i0-7`, `%o0-7`, `%l0-7`, `%g0-7`)
 all have their own colorations that differ from the strange and
-mysterious `%lo`, `%hi`, `%fp`, and `%sp`, as well as any user- defined
-macro registers (such as `%my_register` from `define(my_register, l0)`.
-**Monokai does not color variables.**
+mysterious `%lo`, `%hi`, `%fp`, and `%sp`. Everything else following a
+`%` symbol (e.g. macro-defined registers such as `%my_register` from
+`define(my_register, l0)`) has a distinctive color. **Monokai does not
+color variables.**
 
 ## Snippets
 
-The SPARC package provides 7 snippets for easier insertion of certain
-code structures. They are listed below.
+The SPARC package provides 7 snippets for super simple insertion of
+certain code structures. They are listed below.
 
 `main` creates a basic empty program template, with sections for code and
 extra data.
 
-`subr` inserts a basic non-leaf (i.e. with its own register window)
-subroutine.
+`subr` inserts a basic non-leaf subroutine that has its own register
+window.
 
 `while` you wait, `while` expands into a simple while loop structure!
 
@@ -77,19 +86,23 @@ beginning of the array is already known.
 `arr2d` might seem complicated, but it's just the same as `arr` except
 that it works with a two-dimensional array instead.
 
-`if` you want a conditional, `if` has got your back. Feel free to remove the "else" section (`if_not_condition: ...`) if you don't need an else.
+`if` you want a conditional block, use `if`. Feel free to remove
+the "else" section (`if_not_condition: ...`) if you don't need an else.
 
 
 ## Screenshots
 
-Using 
-[Timmfin's Monokai variation](https://github.com/timmfin/monokai-timmfin):
-![Monokai Timmfin](screenshots/sparc-monokai-timmfin.png)
+Every shot features the beautiful and amazing (and free!) [Adobe Source
+Code Pro][font] Light. It works wonders on zoomed-in displays.
 
-Using
-[Carl Calderon's Calydon Light](https://github.com/carlcalderon/sublime-color-schemes)
-![Calydon Light](screenshots/sparc-calydon-light.png)
+Using [Timmfin's Monokai variation][t-git]: ![Monokai Timmfin][t-img]
+Using [Carl Calderon's Calydon Light][c-git]: ![Calydon Light][c-img]
+Using [Dayle Rees' Github scheme][r-git]: ![Dayle Rees' Github][r-img]
 
-Using
-[Dayle Rees' Github scheme](https://github.com/daylerees/colour-schemes):
-![Dayle Rees' Github](screenshots/sparc-dayle-rees-github.png)
+[font]:  https://blogs.adobe.com/typblography/2012/09/source-code-pro.html
+[t-git]: https://github.com/timmfin/monokai-timmfin
+[t-img]: screenshots/sparc-monokai-timmfin.png
+[c-git]: https://github.com/carlcalderon/sublime-color-schemes
+[c-img]: screenshots/sparc-calydon-light.png
+[r-git]: https://github.com/daylerees/colour-schemes
+[r-img]: screenshots/sparc-dayle-rees-github.png
