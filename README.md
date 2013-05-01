@@ -50,8 +50,8 @@ SPARC`.
 
 The syntax highlighting should be mostly straightforward, but I'd like
 to point out an important distinction between certain opcodes: **those
-opcodes that involve a delay slot -- branching commands, jumping, and
-subroutine calls -- are colored differently than those that do not.**
+opcodes that involve a delay slot—branching commands, jumping, and
+subroutine calls—are colored differently than those that do not.**
 The complete list is located in `sparc.JSON-tmLanguage`, under
 `constant.other.sparc`. `nop` should also have its own color, because
 `nop` is special.
