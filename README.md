@@ -95,9 +95,9 @@ the "else" section (`if_not_condition: ...`) if you don't need an else.
 Every shot features the beautiful and amazing (and free!) [Adobe Source
 Code Pro][font] Light. It works wonders on zoomed-in displays.
 
-Using [Timmfin's Monokai variation][t-git]: ![Monokai Timmfin][t-img]
-Using [Carl Calderon's Calydon Light][c-git]: ![Calydon Light][c-img]
-Using [Dayle Rees' Github scheme][r-git]: ![Dayle Rees' Github][r-img]
+Using [Timmfin's Monokai variation][t-git]: ![Monokai Timmfin][t-img]  
+Using [Carl Calderon's Calydon Light][c-git]: ![Calydon Light][c-img]  
+Using [Dayle Rees' Github scheme][r-git]: ![Dayle Rees' Github][r-img]  
 
 [font]:  https://blogs.adobe.com/typblography/2012/09/source-code-pro.html
 [t-git]: https://github.com/timmfin/monokai-timmfin
