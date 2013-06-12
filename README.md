@@ -19,7 +19,7 @@ The easiest way to install the `SPARC Assembly` package is via Will Bond's
 [Package Control][pc] plugin. [Install it][pc-install], restart Sublime Text,
 and type:
 
-    Ctrl+Shift+P => Package Control: Install Package => SPARC Assembly -> Enter
+    => Ctrl+Shift+P >> Package Control: Install Package >> SPARC Assembly => Enter
 
 Then restart Sublime Text again, and you're done! Revel in the awesome power of
 syntax highlighting!
