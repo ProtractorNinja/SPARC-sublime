@@ -1,4 +1,4 @@
-# SPARC Syntax for Sublime Text 2
+# SPARC Syntax for Sublime Text 2/3
 
 This package provides SPARC assembly language syntax highlighting, as well as a
 few code snippets.
